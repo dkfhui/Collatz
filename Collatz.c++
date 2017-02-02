@@ -29,12 +29,34 @@ int collatz_read (istream& r) {
 // collatz_eval
 // ------------
 
-int collatz_eval (long long n) {
+int collatz_eval (long long num) {
     // <your code>
-    assert(n > 0);
-    int m = n;
-    assert(m > 0);
-    return m;}
+    int cycle_length;
+    long long check = 0;
+    long long placeholder;
+    int max_length = 0;
+    int ans;
+
+    while(check<=num){
+        cycle_length = 0;
+        placeholder = check;
+        while(placeholder > 1){
+            if(placeholder%2==0){
+                placeholder = placeholder / 2;
+                ++cycle_length;
+            }
+            else{
+                placeholder = placeholder + (placeholder >> 1) + 1;         //Synonymous with (3*placeholder +1)/2
+                ++++cycle_length;                
+            }
+        }
+        if(cycle_length >= max_length){
+            max_length = cycle_length;
+            ans = check;            
+        }
+        ++check;
+    }
+    return ans;}
 
 // -------------
 // collatz_print
