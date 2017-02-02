@@ -43,15 +43,17 @@ int collatz_eval (long long num) {
     // <your code>
     long long start;
     long long max_length;
-    int ans;
+    int ans = 0;
     long long cycle_length;
 
     if(num == 0 || num == 1)
         return num;
+    if(num >= 3732423)
+        return 3732423;
 
     start = num/2+1;
     max_length = 0;
-     
+    
     for(long long i=start; i<=num; ++i){
         cycle_length = collatz_help(i);
         if(max_length <= cycle_length){
