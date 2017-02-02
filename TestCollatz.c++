@@ -35,15 +35,15 @@ TEST(CollatzFixture, read) {
 
 TEST(CollatzFixture, eval_1) {
     const int m = collatz_eval(10);
-    ASSERT_EQ(10, m);}
+    ASSERT_EQ(9, m);}
 
 TEST(CollatzFixture, eval_2) {
     const int m = collatz_eval(15);
-    ASSERT_EQ(15, m);}
+    ASSERT_EQ(9, m);}
 
 TEST(CollatzFixture, eval_3) {
     const int m = collatz_eval(20);
-    ASSERT_EQ(20, m);}
+    ASSERT_EQ(19, m);}
 
 // -----
 // print
@@ -62,4 +62,4 @@ TEST(CollatzFixture, solve) {
     istringstream r("3\n10\n15\n20\n");
     ostringstream w;
     collatz_solve(r, w);
-    ASSERT_EQ("10\n15\n20\n", w.str());}
+    ASSERT_EQ("9\n9\n19\n", w.str());}
