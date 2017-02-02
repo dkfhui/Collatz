@@ -45,6 +45,11 @@ TEST(CollatzFixture, eval_3) {
     const int m = collatz_eval(20);
     ASSERT_EQ(19, m);}
 
+TEST(CollatzFixture, eval_4) {
+    const int m = collatz_eval(1);
+    ASSERT_EQ(1, m);}    
+
+
 // -----
 // print
 // -----
