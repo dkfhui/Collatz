@@ -176,8 +176,8 @@ versions:
 	$(CXX) --version
 	@echo
 	ls -ald $(INCLUDE)/boost
-	@echo
-	ls -ald $(INCLUDE)/gtest
+	#@echo
+	#ls -ald $(INCLUDE)/gtest
 	@echo
 	ls -al $(LIBB)/*boost*
 	@echo
