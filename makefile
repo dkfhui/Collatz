@@ -11,12 +11,10 @@ FILES :=            \
     RunCollatz.in   \
     RunCollatz.out  \
     TestCollatz.c++ \
-    TestCollatz.out
-
-# uncomment these:
-#    .travis.yml                           \
-#    collatz-tests/GitHubID-RunCollatz.in  \
-#    collatz-tests/GitHubID-RunCollatz.out \
+    TestCollatz.out \
+    .travis.yml                           \
+    #collatz-tests/GitHubID-RunCollatz.in  \
+    #collatz-tests/GitHubID-RunCollatz.out \
 
 ifeq ($(shell uname), Darwin)                                           # Apple
     CXX          := g++
