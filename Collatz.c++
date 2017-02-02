@@ -15,6 +15,8 @@
 
 using namespace std;
 
+long long* cache;
+
 // ------------
 // collatz_read
 // ------------
@@ -77,6 +79,7 @@ void collatz_print (ostream& w, int m) {
 // -------------
 
 void collatz_solve (istream& r, ostream& w) {
+    cache = new long long[3750000]();
     int t;
     r >> t;
     for (int _ = 0; _ != t; ++_) {
