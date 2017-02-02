@@ -28,6 +28,13 @@ using namespace std;
  */
 int collatz_read (istream& r);
 
+
+//collatz_help
+
+//Helper function for collatz eval
+long long collatz_help(long long x);
+
+
 // ------------
 // collatz_eval
 // ------------
