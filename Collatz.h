@@ -18,8 +18,11 @@
 using namespace std;
 
 //Used to initialize the cache that will be used
-void init_cache();
+void initCache();
 
+int getLongestCollatz(int num);
+
+void calculateCollatz(long long x, int* steps);
 // ------------
 // collatz_read
 // ------------
@@ -30,12 +33,6 @@ void init_cache();
  * @return the int
  */
 int collatz_read (istream& r);
-
-
-//collatz_help
-
-//Helper function for collatz eval
-long long collatz_help(long long x);
 
 
 // ------------
