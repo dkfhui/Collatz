@@ -17,6 +17,9 @@
 
 using namespace std;
 
+//Used to initialize the cache that will be used
+void init_cache();
+
 // ------------
 // collatz_read
 // ------------
